@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if ! which silver > /dev/null; then
+	echo "ERROR: cannot file \`silver\` in your \$PATH" >> /dev/stderr
+	exit 255
+fi
+
+silver -I .. $@ leftRightTree
+
+# The $@ helpfully passes along any arguments this script got to silver.
+

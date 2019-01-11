@@ -1,0 +1,22 @@
+================
+Basic Expression
+================
+expr [ 7 + 3 * 4 ]
+
+---
+(testLang_Top_c 
+  (testLang_TopItem_c 
+    (testLang_ExprStart_c 
+      (testLang_Expr_t)
+      (testLang_LBracket_t)
+      (testLang_Expr_c 
+        (testLang_Expr_c 
+          (testLang_DecimalNum_t))
+        (testLang_Plus_t)
+        (testLang_Expr_c
+          (testLang_Expr_c 
+            (testLang_DecimalNum_t))
+          (testLang_Mult_t)
+          (testLang_Expr_c
+            (testLang_DecimalNum_t))))
+      (testLang_RBracket_t))))

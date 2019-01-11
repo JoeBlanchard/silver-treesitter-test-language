@@ -1,0 +1,45 @@
+================
+Tree
+================
+tree [
+fork  // root
+  leaf  // depth 1
+  fork
+    leaf  // depth 2
+    fork
+      fork  // depth 3
+        leaf  // depth 4
+        leaf
+      leaf
+]
+
+---
+(testLang_Top_c
+(testLang_TopItem_c
+(testLang_Tree_c 
+  (testLang_Tree_t)
+  (testLang_LBracket_t)
+  (testLang_LTree_c 
+    (testLang_LFork_t)
+    (testLang_Comment_t)
+    (testLang_LTree_c 
+      (testLang_LLeaf_t))
+    (testLang_Comment_t)
+    (testLang_RTree_c
+      (testLang_RFork_t)
+      (testLang_LTree_c 
+        (testLang_LLeaf_t))
+      (testLang_Comment_t)
+      (testLang_RTree_c
+        (testLang_RFork_t)
+        (testLang_LTree_c
+          (testLang_LFork_t)
+          (testLang_Comment_t)
+          (testLang_LTree_c
+            (testLang_LLeaf_t))
+          (testLang_Comment_t)
+          (testLang_RTree_c
+            (testLang_RLeaf_t)))
+        (testLang_RTree_c 
+          (testLang_RLeaf_t)))))
+  (testLang_RBracket_t))))
